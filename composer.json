@@ -10,7 +10,19 @@
         "drupal/ctools": "^3.0@beta",
         "drupal/token": "^1.0@RC",
         "drupal/pathauto": "^1.0@RC",
-        "drupal/metatag": "^1.0"
+        "drupal/metatag": "^1.0",
+        "drupal/paragraphs": "^1.1",
+        "drupal/field_collection": "^1.0@alpha",
+        "drupal/field_group": "^1.0@RC",
+        "drupal/ds": "^2.6",
+        "drupal/entity_reference_revisions": "^1.2",
+        "drupal/devel": "^1.0@RC",
+        "drupal/layout_plugin": "^1.0@alpha",
+        "drupal/bg_image_formatter": "^1.0@beta",
+        "drupal/video_embed_field": "^1.4",
+        "drupal/sharethis": "^2.0@beta",
+        "drupal/easy_breadcrumb": "^1.6",
+        "drupal/menu_block": "^1.4"
     },
     "replace": {
         "drupal/core": "~8.3"
