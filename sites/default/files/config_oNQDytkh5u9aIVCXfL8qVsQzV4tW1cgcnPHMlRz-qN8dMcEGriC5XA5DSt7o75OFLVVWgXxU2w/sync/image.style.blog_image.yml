@@ -1,0 +1,7 @@
+uuid: bb1f9700-a53a-43fc-88dc-f70d158764fb
+langcode: en
+status: true
+dependencies: {  }
+name: blog_image
+label: 'Blog Image'
+effects: {  }
