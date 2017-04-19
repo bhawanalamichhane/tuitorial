@@ -1,0 +1,14 @@
+uuid: aa20e627-5af2-4cbe-81cf-0f4bc1bba94b
+name: Tuitorial
+mail: bhawanal77@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
