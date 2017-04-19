@@ -1,7 +1,7 @@
 <?php
 
-/* core/themes/classy/templates/layout/region.html.twig */
-class __TwigTemplate_cfcbc31870227b2c4206cc6d68a4f68f6d27b0fbbde0ad061d29525db596456e extends Twig_Template
+/* core/themes/classy/templates/user/user.html.twig */
+class __TwigTemplate_b51255030b5fbef1e56fcad9b140431a70918f0ac1e884cadf300de143157b3d extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -15,14 +15,14 @@ class __TwigTemplate_cfcbc31870227b2c4206cc6d68a4f68f6d27b0fbbde0ad061d29525db59
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("set" => 16, "if" => 21);
-        $filters = array("clean_class" => 18);
+        $tags = array("if" => 20);
+        $filters = array();
         $functions = array();
 
         try {
             $this->env->getExtension('sandbox')->checkSecurity(
-                array('set', 'if'),
-                array('clean_class'),
+                array('if'),
+                array(),
                 array()
             );
         } catch (Twig_Sandbox_SecurityError $e) {
@@ -39,27 +39,24 @@ class __TwigTemplate_cfcbc31870227b2c4206cc6d68a4f68f6d27b0fbbde0ad061d29525db59
             throw $e;
         }
 
-        // line 16
-        $context["classes"] = array(0 => "region", 1 => ("region-" . \Drupal\Component\Utility\Html::getClass(        // line 18
-(isset($context["region"]) ? $context["region"] : null))));
-        // line 21
+        // line 19
+        echo "<article";
+        echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => "profile"), "method"), "html", null, true));
+        echo ">
+  ";
+        // line 20
         if ((isset($context["content"]) ? $context["content"] : null)) {
-            // line 22
-            echo "  <div";
-            echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, $this->getAttribute((isset($context["attributes"]) ? $context["attributes"] : null), "addClass", array(0 => (isset($context["classes"]) ? $context["classes"] : null)), "method"), "html", null, true));
-            echo ">
-    ";
-            // line 23
+            // line 21
             echo $this->env->getExtension('sandbox')->ensureToStringAllowed($this->env->getExtension('drupal_core')->escapeFilter($this->env, (isset($context["content"]) ? $context["content"] : null), "html", null, true));
-            echo "
-  </div>
-";
         }
+        // line 23
+        echo "</article>
+";
     }
 
     public function getTemplateName()
     {
-        return "core/themes/classy/templates/layout/region.html.twig";
+        return "core/themes/classy/templates/user/user.html.twig";
     }
 
     public function isTraitable()
@@ -69,7 +66,7 @@ class __TwigTemplate_cfcbc31870227b2c4206cc6d68a4f68f6d27b0fbbde0ad061d29525db59
 
     public function getDebugInfo()
     {
-        return array (  53 => 23,  48 => 22,  46 => 21,  44 => 18,  43 => 16,);
+        return array (  53 => 23,  50 => 21,  48 => 20,  43 => 19,);
     }
 
     public function getSource()
@@ -77,28 +74,26 @@ class __TwigTemplate_cfcbc31870227b2c4206cc6d68a4f68f6d27b0fbbde0ad061d29525db59
         return "{#
 /**
  * @file
- * Theme override to display a region.
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
  *
  * Available variables:
- * - content: The content for this region, typically blocks.
- * - attributes: HTML attributes for the region <div>.
- * - region: The name of the region variable as defined in the theme's
- *   .info.yml file.
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
  *
- * @see template_preprocess_region()
+ * @see template_preprocess_user()
  */
 #}
-{%
-  set classes = [
-    'region',
-    'region-' ~ region|clean_class,
-  ]
-%}
-{% if content %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ content }}
-  </div>
-{% endif %}
+<article{{ attributes.addClass('profile') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>
 ";
     }
 }
