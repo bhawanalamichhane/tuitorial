@@ -28,4 +28,7 @@ content:
   sharethis:
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  field_category: true
+  field_image: true
+  field_tags: true
