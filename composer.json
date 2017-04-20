@@ -23,8 +23,7 @@
         "drupal/sharethis": "^2.0@beta",
         "drupal/easy_breadcrumb": "^1.6",
         "drupal/menu_block": "^1.4",
-        "drush/drush": "^8.1",
-        "drupal/address": "^1.0@RC"
+        "drush/drush": "^8.1"
     },
     "replace": {
         "drupal/core": "~8.3"
